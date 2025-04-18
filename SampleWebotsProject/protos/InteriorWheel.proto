@@ -3,8 +3,11 @@
 # license url: https://cyberbotics.com/webots_assets_license
 # omnidirectionnal wheels with 2D coulomb friction
 
+EXTERNPROTO "../protos/SubWheelMesh.proto"
+EXTERNPROTO "../protos/WheelMesh.proto"
+EXTERNPROTO "../protos/SubWheel.proto"
 PROTO InteriorWheel [
-  field SFVec3f translation 0 0 0 
+  field SFVec3f translation 0 0 0
   field SFVec3f anchor 0 0 0
   field SFString name "wheel"
   field SFString sensorName "wheel_sensor"
@@ -25,7 +28,7 @@ PROTO InteriorWheel [
       anchor IS anchor
     }
     endPoint DEF WHEEL_SOLID Solid {
-      translation IS translation 
+      translation IS translation
       children [
         WheelMesh {
         }

@@ -1,4 +1,4 @@
-
+#VRML_SIM R2025a utf8
 PROTO TapeBox [
   field SFVec3f translation 0 0 0
   field SFString name "tapebox"
@@ -6,11 +6,11 @@ PROTO TapeBox [
 ]
 {
 	Solid {
-	
+
 		translation IS translation
-		name IS name 
+		name IS name
         children [
-		
+
 			Solid {
 			  translation 0 0 -0.305
 
@@ -28,7 +28,7 @@ PROTO TapeBox [
 			  ]
 			  name "tapeBox-1"
 			}
-			
+
 			Solid {
 			  translation 0.5588 0 -0.305
 			  children [
@@ -61,12 +61,11 @@ PROTO TapeBox [
 			  ]
 			  name "tapeBox-3"
 			}
-			
+
 		]
-			
-			
-			
-		
+
+
+
+
 	}
 }
-

@@ -3,20 +3,23 @@
 # license url: https://cyberbotics.com/webots_assets_license
 # omnidirectionnal wheels with 2D coulomb friction
 
+EXTERNPROTO "../protos/InteriorWheel.proto"
+EXTERNPROTO "../protos/ExteriorWheel.proto"
+
 PROTO GoBildaStrafer [
   field SFVec3f    translation     0 0.105 0      # Is `Transform.translation`.
   unconnectedField  SFFloat    frontRightWheelExtraPower 0
   unconnectedField  SFFloat    frontLeftWheelExtraPower 0
   unconnectedField  SFFloat    backRightWheelExtraPower 0
   unconnectedField  SFFloat    backLeftWheelExtraPower 0
-  
+
   unconnectedField  SFBool     useRotationCorrection TRUE
   unconnectedField  SFBool     useLateralCorrection TRUE
-  
+
   unconnectedField  SFFloat    rotationPID_P 0.1
   unconnectedField  SFFloat    rotationPID_I 0.01
   unconnectedField  SFFloat    rotationPID_D 0
-   
+
   field SFRotation rotation        1 0 0 0 # Is `Transform.rotation`.
   field SFString   name            "GobildaStrafer"      # Is `Solid.name`.
   field SFString   controller      ""      # Is `Robot.controller`.
@@ -26,7 +29,7 @@ PROTO GoBildaStrafer [
   field MFNode     bodySlot        []            # Extends the robot with new nodes in the body slot.
 ]
 {
- 
+
  Robot {
   window "telemetry"
   translation IS translation
@@ -39,9 +42,9 @@ PROTO GoBildaStrafer [
 	Group {
       children IS bodySlot
     }
-	
-	
-	
+
+
+
 	Solid {
 	  translation 0 -0.055 -0.193
 	  children [
@@ -61,8 +64,8 @@ PROTO GoBildaStrafer [
         mass 0.1
       }
 	}
-	
-	
+
+
 	Solid {
 	  translation 0 -0.055 0.193
 	  children [
@@ -82,7 +85,7 @@ PROTO GoBildaStrafer [
         mass 0.1
       }
 	}
-	
+
 	Solid {
 	  translation 0 -0.055 -0.144
 	  children [
@@ -121,7 +124,7 @@ PROTO GoBildaStrafer [
         mass 0.1
       }
 	}
-	
+
 	Solid {
 	  translation -0.002 -0.055 0
 	  children [
@@ -160,30 +163,30 @@ PROTO GoBildaStrafer [
         mass 0.1
       }
 	}
-	
+
 	Transform  {
 		rotation -1 0 0 1.57079632679
 		children [
 			DEF FRONT_RIGHT_WHEEL InteriorWheel {
-			  translation 0.168 -0.205 -0.055 
+			  translation 0.168 -0.205 -0.055
 			  anchor 0.168 -0.205 -0.055
 			  name "frontRightWheel"
 			  sensorName "frontRightWheelSensor"
 			}
 			DEF FRONT_LEFT_WHEEL ExteriorWheel {
-			  translation 0.168 0.205 -0.055	 
+			  translation 0.168 0.205 -0.055
 			  anchor 0.168 0.205 -0.055
 			  name "frontLeftWheel"
 			  sensorName "frontLeftWheelSensor"
 			}
 			DEF BACK_RIGHT_WHEEL ExteriorWheel {
-			  translation -0.168 -0.205 -0.055 
+			  translation -0.168 -0.205 -0.055
 			  anchor -0.168 -0.205 -0.055
 			  name "backRightWheel"
 			  sensorName "backRightWheelSensor"
 			}
 			DEF BACK_LEFT_WHEEL InteriorWheel {
-			  translation -0.168 0.205 -0.055 
+			  translation -0.168 0.205 -0.055
 			  anchor -0.168 0.205 -0.055
 			  name "backLeftWheel"
 			  sensorName "backLeftWheelSensor"
