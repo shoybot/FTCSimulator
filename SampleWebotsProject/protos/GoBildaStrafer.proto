@@ -39,160 +39,160 @@ PROTO GoBildaStrafer [
   synchronization IS synchronization
   name IS name
   children [
-	Group {
+  Group {
       children IS bodySlot
     }
 
 
 
-	Solid {
-	  translation 0 -0.055 -0.193
-	  children [
-		DEF LEFT_RAIL_WHEELS Shape {
-		  appearance PBRAppearance {
-			metalness 0.5
-		  }
-		  geometry Box {
-			size 0.2 0.048 0.048
-		  }
-		}
-	  ]
-	  name "LEFT_RAIL_WHEELS"
-	  boundingObject USE LEFT_RAIL_WHEELS
-	   physics Physics {
+  Solid {
+    translation 0 -0.055 -0.193
+    children [
+    DEF LEFT_RAIL_WHEELS Shape {
+      appearance PBRAppearance {
+      metalness 0.5
+      }
+      geometry Box {
+      size 0.2 0.048 0.048
+      }
+    }
+    ]
+    name "LEFT_RAIL_WHEELS"
+    boundingObject USE LEFT_RAIL_WHEELS
+     physics Physics {
         density -1
         mass 0.1
       }
-	}
+  }
 
 
-	Solid {
-	  translation 0 -0.055 0.193
-	  children [
-		DEF RIGHT_RAIL_WHEELS Shape {
-		  appearance PBRAppearance {
-			metalness 0.5
-		  }
-		  geometry Box {
-			size 0.2 0.048 0.048
-		  }
-		}
-	  ]
-	  name "RIGHT_RAIL_WHEELS"
-	  boundingObject USE RIGHT_RAIL_WHEELS
-	   physics Physics {
+  Solid {
+    translation 0 -0.055 0.193
+    children [
+    DEF RIGHT_RAIL_WHEELS Shape {
+      appearance PBRAppearance {
+      metalness 0.5
+      }
+      geometry Box {
+      size 0.2 0.048 0.048
+      }
+    }
+    ]
+    name "RIGHT_RAIL_WHEELS"
+    boundingObject USE RIGHT_RAIL_WHEELS
+     physics Physics {
         density -1
         mass 0.1
       }
-	}
+  }
 
-	Solid {
-	  translation 0 -0.055 -0.144
-	  children [
-		DEF LEFT_RAIL Shape {
-		  appearance PBRAppearance {
-			metalness 0.5
-		  }
-		  geometry Box {
-			size 0.432 0.048 0.048
-		  }
-		}
-	  ]
-	  name "LEFT_RAIL"
-	  boundingObject USE LEFT_RAIL
-	   physics Physics {
+  Solid {
+    translation 0 -0.055 -0.144
+    children [
+    DEF LEFT_RAIL Shape {
+      appearance PBRAppearance {
+      metalness 0.5
+      }
+      geometry Box {
+      size 0.432 0.048 0.048
+      }
+    }
+    ]
+    name "LEFT_RAIL"
+    boundingObject USE LEFT_RAIL
+     physics Physics {
         density -1
         mass 0.1
       }
-	}
-	Solid {
-	  translation -0.192 -0.055 0
-	  children [
-		DEF BACK_RAIL Shape {
-		  appearance PBRAppearance {
-			metalness 0.5
-		  }
-		  geometry Box {
-			size 0.048 0.048 0.24
-		  }
-		}
-	  ]
-	  name "BACK_RAIL"
-	  boundingObject USE BACK_RAIL
-	   physics Physics {
+  }
+  Solid {
+    translation -0.192 -0.055 0
+    children [
+    DEF BACK_RAIL Shape {
+      appearance PBRAppearance {
+      metalness 0.5
+      }
+      geometry Box {
+      size 0.048 0.048 0.24
+      }
+    }
+    ]
+    name "BACK_RAIL"
+    boundingObject USE BACK_RAIL
+     physics Physics {
         density -1
         mass 0.1
       }
-	}
+  }
 
-	Solid {
-	  translation -0.002 -0.055 0
-	  children [
-		DEF FRONT_RAIL Shape {
-		  appearance PBRAppearance {
-			metalness 0.5
-		  }
-		  geometry Box {
-			size 0.048 0.048 0.24
-		  }
-		}
-	  ]
-	  name "FRONT_RAIL"
-	  boundingObject USE FRONT_RAIL
-	   physics Physics {
+  Solid {
+    translation -0.002 -0.055 0
+    children [
+    DEF FRONT_RAIL Shape {
+      appearance PBRAppearance {
+      metalness 0.5
+      }
+      geometry Box {
+      size 0.048 0.048 0.24
+      }
+    }
+    ]
+    name "FRONT_RAIL"
+    boundingObject USE FRONT_RAIL
+     physics Physics {
         density -1
         mass 0.1
       }
-	}
-	Solid {
-	  translation 0 -0.055 0.144
-	  children [
-		DEF RIGHT_RAIL Shape {
-		  appearance PBRAppearance {
-			metalness 0.5
-		  }
-		  geometry Box {
-			size 0.432 0.048 0.048
-		  }
-		}
-	  ]
-	  name "RIGHT_RAIL"
-	  boundingObject USE RIGHT_RAIL
-	  physics Physics {
+  }
+  Solid {
+    translation 0 -0.055 0.144
+    children [
+    DEF RIGHT_RAIL Shape {
+      appearance PBRAppearance {
+      metalness 0.5
+      }
+      geometry Box {
+      size 0.432 0.048 0.048
+      }
+    }
+    ]
+    name "RIGHT_RAIL"
+    boundingObject USE RIGHT_RAIL
+    physics Physics {
         density -1
         mass 0.1
       }
-	}
+  }
 
-	Transform  {
-		rotation -1 0 0 1.57079632679
-		children [
-			DEF FRONT_RIGHT_WHEEL InteriorWheel {
-			  translation 0.168 -0.205 -0.055
-			  anchor 0.168 -0.205 -0.055
-			  name "frontRightWheel"
-			  sensorName "frontRightWheelSensor"
-			}
-			DEF FRONT_LEFT_WHEEL ExteriorWheel {
-			  translation 0.168 0.205 -0.055
-			  anchor 0.168 0.205 -0.055
-			  name "frontLeftWheel"
-			  sensorName "frontLeftWheelSensor"
-			}
-			DEF BACK_RIGHT_WHEEL ExteriorWheel {
-			  translation -0.168 -0.205 -0.055
-			  anchor -0.168 -0.205 -0.055
-			  name "backRightWheel"
-			  sensorName "backRightWheelSensor"
-			}
-			DEF BACK_LEFT_WHEEL InteriorWheel {
-			  translation -0.168 0.205 -0.055
-			  anchor -0.168 0.205 -0.055
-			  name "backLeftWheel"
-			  sensorName "backLeftWheelSensor"
-			}
-		]
-	}
+  Transform  {
+    rotation -1 0 0 1.57079632679
+    children [
+      DEF FRONT_RIGHT_WHEEL InteriorWheel {
+        translation 0.168 -0.205 -0.055
+        anchor 0.168 -0.205 -0.055
+        name "frontRightWheel"
+        sensorName "frontRightWheelSensor"
+      }
+      DEF FRONT_LEFT_WHEEL ExteriorWheel {
+        translation 0.168 0.205 -0.055
+        anchor 0.168 0.205 -0.055
+        name "frontLeftWheel"
+        sensorName "frontLeftWheelSensor"
+      }
+      DEF BACK_RIGHT_WHEEL ExteriorWheel {
+        translation -0.168 -0.205 -0.055
+        anchor -0.168 -0.205 -0.055
+        name "backRightWheel"
+        sensorName "backRightWheelSensor"
+      }
+      DEF BACK_LEFT_WHEEL InteriorWheel {
+        translation -0.168 0.205 -0.055
+        anchor -0.168 0.205 -0.055
+        name "backLeftWheel"
+        sensorName "backLeftWheelSensor"
+      }
+    ]
+  }
   ]
   physics Physics {
     density -1
